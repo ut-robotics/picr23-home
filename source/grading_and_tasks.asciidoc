@@ -142,44 +142,19 @@ and the other half of the points from another team.
 
 https://utr.ee[*Tasks Table*]
 
-=== Progress blog and presentation
+=== Progress presentation
 
-Task is completed when each team member has written down their progress since the last presentation
-on the team repository's README and the team has presented their progress.
-
-==== Blog
-
-* Short description about the daily progress and the time spent.
-** Spent time is not used for grading, only for better course planning next year.
-* Daily blog should describe what you did and what was the result of it.
-* Days without any activity do not need to be blogged about.
-* Example:
-
-[source,asciidoc]
-----
-== Blog
-
-=== Monday 2022-09-05
-
-*Kristiina:* Soldered mainboard. Broke one lead, but fortunately it was not important. (2h) +
-*Kalle:* Started designing chassis. Was too hard for me. Must ask for help. (3.5h) +
-*Abraham:* Installed Python. Failed with lots of errors. (1.5h) +
-
-=== Tuesday 2022-09-06
-
-...
-----
-
-==== Progress presentation
+Task is completed when the team has presented their progress.
 
 * In Delta room 2024.
-* Mondays 18:15 - 19:00, once every two weeks.
-* 5 minutes per team.
+* Mondays 18:15 - 18:45, once every two weeks.
+* Each team has 1 minute to present and 1 minute for questions.
 * At least 1 team member presents the progress of all team members.
-* Slides must be prepared and used to illustrate the progress.
+** Talk about main achievements and problems that you need help with.
+* Each team must prepare 1 slide that illustrates their progress.
 ** Slides can, for example, contain pictures of the current designs, videos about how the robot is working,
 pictures and videos of some components and simple diagrams or drawings.
-** Avoid using too much text or only text.
+** Avoid using text.
 
 === Programming
 
@@ -313,6 +288,7 @@ the opponent robot moves between basket and the ball and remains there.
 === Mechanics
 
 * Design tasks are approved as a whole, not individually.
+* Unfinished designs can be submitted for review at any time for early feedback.
 
 ==== Test robot thrower design completed
 
@@ -325,6 +301,7 @@ the opponent robot moves between basket and the ball and remains there.
 
 ==== Test robot thrower mechanics assembled and attached to robot
 
+* Design approved.
 * Thrower assembled and attached to the robot.
 
 ==== Omni wheels design completed
@@ -334,37 +311,44 @@ the opponent robot moves between basket and the ball and remains there.
 
 ==== Motor mounts design completed
 
-* Design approved
+* Design approved.
 * Motors and wheels added to the assembly
 
 ==== Camera mount design completed
 
 * Design approved.
 * Camera added to the assembly.
-* Field of view pyramid added to the camera.
+* Color sensor field of view pyramid added to the camera.
+** https://www.intelrealsense.com/wp-content/uploads/2023/07/Intel-RealSense-D400-Series-Datasheet-July-2023.pdf
+* (Recommended) Consider aligning color sensor with the thrower. Color sensor is offset from the center of the camera.
 
 ==== Ball thrower design completed
 
+* Design approved.
 * Thrower attached to the chassis in the design.
 * Thrower should technically be able to throw the ball.
 
 ==== Adjustable ball throwing angle design completed
 
+* All "Ball thrower design completed" task requirements apply.
 * Throwing angle can be adjusted through the mainboard (for example with a servo).
 
 ==== Ball holding thrower design completed
 
+* All "Ball thrower design completed" task requirements apply.
 * Thrower designed to grab a ball, hold the ball while moving and release or throw the ball while holding.
 
 ==== Robot chassis design completed
 
+* Design approved.
 * Chassis for connecting all the parts.
-* Battery mounts.
+* Batteries attachable to chassis.
 * Electronics mounting:
 ** Computer
 ** Mainboard
 ** Motor boards
-** Cutouts for power switches and PC power adapter connector.
+** Cutout for motor battery power switch.
+** Cutout for PC power adapter socket.
 * Design that prevents balls from getting stuck against the robot.
 If the robot drives against the ball, the ball should roll away.
 ** Problem:
@@ -388,8 +372,9 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 ** Milled parts must fit on the material sheet.
 ** Must use available milling tools.
 *** Consult with instructors about available tools.
+**** TODO: change link, https://ut-robotics.github.io/picr22-home/basketball_robot_guide/mechanics/cam.html#_fusion_360_digilab_tools_library
 * All parts fabricated.
-* Do not need to be assembled.
+* Parts do not need to be assembled.
 
 ==== Mechanics assembled
 
@@ -403,7 +388,7 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 * Motor and ESC attached and working.
 * Motor speed can be controlled through mainboard.
 
-==== Mainboard design completed
+==== Mainboard schematic completed
 
 * Design approved.
 * Required functionality:
@@ -411,7 +396,7 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 ** Thrower motor control.
 ** Communication with robot’s computer.
 
-==== Motor driver design completed
+==== Motor driver schematic completed
 
 * Design approved.
 * Can be combined with the mainboard.
@@ -420,28 +405,44 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 ** Works with batteries that are used on the robot.
 ** Electrically isolated from the mainboard.
 
-==== Mainboard soldered and working
+==== Mainboard design completed
 
+* Same requirements as for "Mainboard schematic completed".
+* Design (schematic and layout) approved.
+** Recommended PCB limitations:
+*** Size up to 50 mm x 50 mm.
+*** Price from JLCPCB up to 30$ (TODO check correct price).
+*** For exceptions ask instructors.
+
+==== Motor driver design completed
+
+* Same requirements as for "Motor driver schematic completed".
+* Design (schematic and layout) approved.
+** Recommended PCB limitations:
+*** Size up to 50 mm x 50 mm.
+*** Price from JLCPCB up to 30$ (TODO check correct price).
+*** For exceptions ask instructors
+
+==== PCB(s) soldered properly
+
+* All components and wires soldered.
+* Assembled PCB(s) inspected by instructors and approved.
+
+==== PCB(s) working with firmware
+
+* Firmware implements required functionality.
+* Firmware code hosted in team's repository.
+* Firmware code reviewed and approved.
 * Motors can be controlled through the mainboard.
-
-==== Motor drivers soldered and working
-
-* Can be controlled through a mainboard.
 * Motors can be rotated in both directions.
 * Encoders must work. Closed loop (e.g. PI or PID) speed control must work.
-
-==== Mainboard firmware completed
-
-* Implements required functionality.
-* Code hosted on GitHub in team's repository.
-* Code reviewed and approved.
 
 ==== Mainboard documented
 
 * All documentation must be in your team's repository with electronics design files.
 * Functionality and connector pinouts described in AsciiDoc format in `electronics/README.asciidoc` file.
 * Schematic PDF file.
-* Components BOM in TSV (tab-separated values, *.tsv) format.
+* Components BOM in TSV (tab-separated values, *.tsv) format. TODO: think through BOM requirements (require BomDoc in Altium?)
 ** Columns
 *** Name
 *** Description
@@ -477,7 +478,8 @@ to ensure that changing battery voltage doesn't affect thrower motor speed.
 * Command(s) can be sent through mainboard:
 ** To move wheel motors.
 ** Change thrower motor speed.
-* Power buttons and power path control board works.
+* Motor battery power switch works.
+* Power path control board works.
 ** Refer to link:https://github.com/ReikoR/power_path_control_2016[power path control board] GitHub repository
 on how to use the board.
 
@@ -500,17 +502,15 @@ on how to use the board.
 on how to use the board.
 ** Batteries
 ** Power switch between motor battery’s positive power connection.
-*** Power switch for a computer battery is optional.
 ** Wires connecting electronics.
 *** Wires that connect to power sources should not be exposed.
 
 ==== Team documentation started
 
-* In team's GitHub repository `documentation` branch and `README.asciidoc` file.
+* In team's repository `documentation` branch and `README.asciidoc` file.
 * In English.
 * Names of the team members.
 * Public Fusion 360 project link.
-* Progress blog section.
 
 ==== Test competition
 
@@ -521,9 +521,13 @@ on how to use the board.
 ** Properly reacts to referee commands.
 ** Scores at least 1 point.
 
-===== Test competition with new robot
+===== Test competition with new mechanics
 
-* Bonus points for qualifying with new robot.
+* Bonus points for qualifying with new mechanics.
+
+===== Test competition with new electronics
+
+* Bonus points for qualifying with new electronics.
 
 ===== Test competition winner
 
@@ -531,8 +535,15 @@ on how to use the board.
 
 ==== Delta X
 
-* New robot qualifies according to basketball rules.
-* Test robot not allowed.
+* New robot or test qualifies according to basketball rules.
+
+===== Delta X with new mechanics
+
+* Bonus points for qualifying with new mechanics.
+
+===== Delta X with new electronics
+
+* Bonus points for qualifying with new electronics.
 
 ==== Delta X best course robot
 
