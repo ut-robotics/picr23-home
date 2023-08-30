@@ -1,4 +1,4 @@
-= Project in Competitive Robotics 2022
+= Project in Competitive Robotics 2023
 
 * xref:boot_camp_tasks/index.asciidoc[Boot camp tasks]
 * https://utr.ee[Tasks Table]
