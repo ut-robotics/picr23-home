@@ -513,12 +513,12 @@ on how to use the board.
 
 ==== Test competition
 
-* Either old robot or new robot qualifies according to basketball rules:
+* Either test robot or new robot qualifies according to basketball rules:
 ** Fits into the weight limit.
 ** Fits into size limits.
 ** Does not have any forbidden colors visible.
-** Properly reacts to referee commands.
 ** Scores at least 1 point.
+* Starting from the 2nd test competition, robot needs to properly react to referee commands.
 
 ===== Test competition with new mechanics
 
