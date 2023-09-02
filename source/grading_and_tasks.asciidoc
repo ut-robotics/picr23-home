@@ -156,6 +156,47 @@ Task is completed when the team has presented their progress.
 pictures and videos of some components and simple diagrams or drawings.
 ** Avoid using text.
 
+=== Test robot
+
+==== Test robot assembled
+
+* Mechanics assembled:
+** Chassis with camera mount.
+** At least 3 wheels.
+** Parts connected to each other without adhesives (e.g. tape or glue).
+* Electronics attached and working:
+** Computer
+** Camera
+** Mainboard
+** Motors for each wheel.
+** Motor controller for each motor.
+** Power path control board with PC adapter and battery inputs and PC power output.
+*** Refer to link:https://github.com/ReikoR/power_path_control_2016[power path control board] GitHub repository
+on how to use the board.
+** Batteries
+** Power switch between motor battery’s positive power connection.
+** Wires connecting electronics.
+*** Wires that connect to power sources should not be exposed.
+
+==== Test robot thrower design completed
+
+* Thrower should technically be able to throw the ball.
+
+==== Test robot thrower fabricated
+
+* CAM approved.
+* Parts fabricated.
+
+==== Test robot thrower mechanics assembled and attached to robot
+
+* Design approved.
+* Thrower assembled and attached to the robot.
+
+==== Test robot thrower electronics attached and working
+
+* Motor and ESC attached and working.
+* Motor speed can be controlled through mainboard.
+
 === Programming
 
 * Each task must be successfully completed 2 times in a row.
@@ -290,20 +331,6 @@ the opponent robot moves between basket and the ball and remains there.
 * Design tasks are approved as a whole, not individually.
 * Unfinished designs can be submitted for review at any time for early feedback.
 
-==== Test robot thrower design completed
-
-* Thrower should technically be able to throw the ball.
-
-==== Test robot thrower fabricated
-
-* CAM approved.
-* Parts fabricated.
-
-==== Test robot thrower mechanics assembled and attached to robot
-
-* Design approved.
-* Thrower assembled and attached to the robot.
-
 ==== Omni wheels design completed
 
 * Design approved.
@@ -320,7 +347,8 @@ the opponent robot moves between basket and the ball and remains there.
 * Camera added to the assembly.
 * Color sensor field of view pyramid added to the camera.
 ** https://www.intelrealsense.com/wp-content/uploads/2023/07/Intel-RealSense-D400-Series-Datasheet-July-2023.pdf
-* (Recommended) Consider aligning color sensor with the thrower. Color sensor is offset from the center of the camera.
+* It's recommended to align color sensor with the thrower.
+Color sensor is offset from the center of the camera.
 
 ==== Ball thrower design completed
 
@@ -372,7 +400,7 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 ** Milled parts must fit on the material sheet.
 ** Must use available milling tools.
 *** Consult with instructors about available tools.
-**** TODO: change link, https://ut-robotics.github.io/picr22-home/basketball_robot_guide/mechanics/cam.html#_fusion_360_digilab_tools_library
+**** See xref:basketball_robot_guide/mechanics/cam.asciidoc#fusion_360_digilab_tools_library[Fusion 360 DigiLab tools library]
 * All parts fabricated.
 * Parts do not need to be assembled.
 
@@ -383,10 +411,9 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 
 === Electronics
 
-==== Test robot thrower electronics attached and working
-
-* Motor and ESC attached and working.
-* Motor speed can be controlled through mainboard.
+* It's recommended to design a single PCB with a microcontroller and motor drivers.
+* *All PCB designs must be ready for ordering before 2023-12-04 20:00.*
+No orders will be made after that time.
 
 ==== Mainboard schematic completed
 
@@ -399,7 +426,6 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 ==== Motor driver schematic completed
 
 * Design approved.
-* Can be combined with the mainboard.
 * Requirements:
 ** Can drive motors that are used on the robot.
 ** Works with batteries that are used on the robot.
@@ -409,18 +435,18 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 
 * Same requirements as for "Mainboard schematic completed".
 * Design (schematic and layout) approved.
-** Recommended PCB limitations:
+** PCB limitations:
 *** Size up to 50 mm x 50 mm.
-*** Price from JLCPCB up to 30$ (TODO check correct price).
+*** Price from JLCPCB up to 40$.
 *** For exceptions ask instructors.
 
 ==== Motor driver design completed
 
 * Same requirements as for "Motor driver schematic completed".
 * Design (schematic and layout) approved.
-** Recommended PCB limitations:
+** PCB limitations:
 *** Size up to 50 mm x 50 mm.
-*** Price from JLCPCB up to 30$ (TODO check correct price).
+*** Price from JLCPCB up to 40$.
 *** For exceptions ask instructors
 
 ==== PCB(s) soldered properly
@@ -436,27 +462,6 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 * Motors can be controlled through the mainboard.
 * Motors can be rotated in both directions.
 * Encoders must work. Closed loop (e.g. PI or PID) speed control must work.
-
-==== Mainboard documented
-
-* All documentation must be in your team's repository with electronics design files.
-* Functionality and connector pinouts described in AsciiDoc format in `electronics/README.asciidoc` file.
-* Schematic PDF file.
-* Components BOM in TSV (tab-separated values, *.tsv) format. TODO: think through BOM requirements (require BomDoc in Altium?)
-** Columns
-*** Name
-*** Description
-*** Designator
-*** Quantity
-*** Mouser order code
-*** Farnell order code
-*** TME order code
-* Gerber files in separate directory.
-** Gerber X2 format is preferred.
-
-==== Motor driver documented
-
-* Same requirements as for "Mainboard documented" task.
 
 ==== Throwing angle adjustable through mainboard
 
@@ -483,34 +488,28 @@ to ensure that changing battery voltage doesn't affect thrower motor speed.
 ** Refer to link:https://github.com/ReikoR/power_path_control_2016[power path control board] GitHub repository
 on how to use the board.
 
-=== Other
+==== Mainboard documented
 
-==== Test robot assembled
+* All documentation must be in your team's repository with electronics design files.
+* Functionality and connector pinouts described in AsciiDoc format in `electronics/README.asciidoc` file.
+* Schematic PDF file.
+* Components BOM in TSV (tab-separated values, *.tsv) format. TODO: think through BOM requirements (require BomDoc in Altium?)
+** Columns
+*** Name
+*** Description
+*** Designator
+*** Quantity
+*** Mouser order code
+*** Farnell order code
+*** TME order code
+* Gerber files in separate directory.
+** Gerber X2 format is preferred.
 
-* Mechanics assembled:
-** Chassis with camera mount.
-** At least 3 wheels.
-** Parts connected to each other without adhesives (e.g. tape or glue).
-* Electronics attached and working:
-** Computer
-** Camera
-** Mainboard
-** Motors for each wheel.
-** Motor controller for each motor.
-** Power path control board with PC adapter and battery inputs and PC power output.
-*** Refer to link:https://github.com/ReikoR/power_path_control_2016[power path control board] GitHub repository
-on how to use the board.
-** Batteries
-** Power switch between motor battery’s positive power connection.
-** Wires connecting electronics.
-*** Wires that connect to power sources should not be exposed.
+==== Motor driver documented
 
-==== Team documentation started
+* Same requirements as for "Mainboard documented" task.
 
-* In team's repository `documentation` branch and `README.asciidoc` file.
-* In English.
-* Names of the team members.
-* Public Fusion 360 project link.
+=== Competitions
 
 ==== Test competition
 
@@ -545,17 +544,26 @@ on how to use the board.
 
 * Bonus points for qualifying with new electronics.
 
-==== Delta X best course robot
+===== Delta X best course robot
 
 * Bonus points for the best team among course participants.
 
-==== Delta X 2nd best course robot
+===== Delta X 2nd best course robot
 
 * Bonus points for the 2nd best team among course participants.
 
-==== Delta X 3rd best course robot
+===== Delta X 3rd best course robot
 
 * Bonus points for the 3rd best team among course participants.
+
+=== Other
+
+==== Team documentation started
+
+* In team's repository `documentation` branch and `README.asciidoc` file.
+* In English.
+* Names of the team members.
+* Public Fusion 360 project link.
 
 ==== Team documentation completed
 

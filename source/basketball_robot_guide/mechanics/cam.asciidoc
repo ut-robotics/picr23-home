@@ -195,6 +195,7 @@ If you want to include only some of the operations, select only those operations
 
 == Tool settings
 
+[#fusion_360_digilab_tools_library]
 === Fusion 360 DigiLab tools library
 
 You can import the file below into Fusion 360.
