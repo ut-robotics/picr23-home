@@ -34,13 +34,11 @@ link:mechanics/attach.asciidoc[Attach motor with mount to test robot]
 
 link:software/setup.asciidoc[Setup]
 
-link:software/commands.asciidoc[Send commands to mainboard to rotate a motor]
+link:software/commands.asciidoc[Send commands to mainboard to rotate motors]
 
-link:software/motion.asciidoc[Simulate ball following with TurtleMotion]
+link:software/motion.asciidoc[Simulate rotating towars a ball with PrintingMotion]
 
-link:software/omni_motion.asciidoc[Follow ball with TurtleOmniMotion]
-
-link:software/follow_ball.asciidoc[Follow ball with the test robot]
+link:software/follow_ball.asciidoc[Rotate towards the ball with the test robot]
 
 == Changelog
 
@@ -48,3 +46,7 @@ link:software/follow_ball.asciidoc[Follow ball with the test robot]
 . Created Electronics guide documents
 . Created Mechanics guide documents
 . Created Software guide documents
+
+=== 2022-09-03
+. Removed Python 3.9 requirements for the Software guide
+. Modified Software guide to not include omnimotion and just include rotating towards the ball

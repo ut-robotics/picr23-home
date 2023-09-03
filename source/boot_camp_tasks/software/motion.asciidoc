@@ -1,4 +1,4 @@
-= Simulate ball following with TurtleRobot
+= Simulate ball following with PrintingMotion
 
 . Open `main.py`.
 This file contains an example implementation of the image processor and motion classes.
@@ -9,16 +9,12 @@ and outputs a `ProcessedResults` object that contains information about objects 
 . If there are balls in the frame, *find the largest balls Object.*
 . *Find the X and Y coordinates of the ball.*
 Take into consideration that the zero coordinates of the frame are in the upper left corner.
-. Using these coordinates calculate the side speed, forward speed and rotation for the robot.
-Use `TurtleRobot` and its move method to visualize the robots motion.
-Its motion can be seen in the "Default turtle robot" window.
+. Using these coordinates calculate the rotation for the robot to turn towards the ball.
+Use `PrintingMotion` and its move method print the direction the robot is turning.
+If the directiction is opposite to what you expect, you can set the `polarity` variable to -1 to invert it. Teh default is 1.
 Write code so that *the robot centers the ball horizontally*.
-*Vertically the ball must be on the bottom third of the frame.*
-. Use the `TurtleRobot` class to visualise the robots motion vector.
-. Play around with your speed calculation methods to provide a smooth trajectory for the robot.
 *Don't only use constant speeds* since it leads to jerky motion.
-Instead, try to use proportional movement
-where the delta of the desired ball location to the current ball location determines the robot's speed.
+Try to implement a proportional system where the robot turns faster when the ball is further away from the center and slower when closer, stopping when centered.
 . Demo your solution to the instructors.
 Iterate on the solution in case deficiencies are brought up by instructors.
 . If everything works, continue to the next task.
