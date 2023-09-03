@@ -45,13 +45,16 @@ Without this, opening a serial port won&#8217;t work without sudo permissions.</
 </li>
 <li>
 <p>Add implementations for the <code>open</code> and <code>close</code> methods.
-Use <code>TurtleRobot</code> as an example.
+Use <code>PrintingMotion</code> as an example.
 Consider that you should be able to define what port the serial connection should be created for.</p>
 </li>
 <li>
 <p>Define a new method for sending commands to the mainboard over serial.
 Refer to <a href="../../basketball_robot_guide/electronics/test_robot.html">Test robot page</a>
 for a detailed explanation of the command structure and how to assemble a command.</p>
+</li>
+<li>
+<p>For now you only need to be able to rotate in place so concentrate on that.</p>
 </li>
 <li>
 <p>Test your code to validate that you can connect to and disconnect from the mainboard.</p>
@@ -65,7 +68,7 @@ It should be able to control motors.</p>
 </li>
 <li>
 <p>Use your created functionality to control the motors.
-<strong>Tell the motor to spin with a speed of 20 and after 2 seconds, reverse its direction.</strong></p>
+<strong>Tell the motors to spin with a speed of 20 and after 2 seconds, reverse its direction and then stop.</strong></p>
 </li>
 </ol>
 </div>

@@ -28,25 +28,10 @@ You should choose the simple install and overwrite any existing OS-es.</p>
 </div>
 </li>
 <li>
-<p>Install Python 3.9 to your linux machine.<br>
-A guide can be found here: <a href="https://linuxhint.com/install-python-3-9-linux-mint/" class="bare">https://linuxhint.com/install-python-3-9-linux-mint/</a></p>
-</li>
-<li>
-<p>Install <code>distutils</code> for python 3.9:</p>
+<p>Install <code>distutils</code> for python :</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">sudo apt-get install python3.9-distutils</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Install pip3.9 using these commands:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">wget https://bootstrap.pypa.io/get-pip.py
-python3.9 get-pip.py
-echo 'export PATH=~/.local/bin/:$PATH' &gt;&gt; ~/.bashrc
-source ~/.bashrc</code></pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo apt-get install python3-distutils</code></pre>
 </div>
 </div>
 </li>
@@ -67,7 +52,7 @@ Later you might want to install python specific plugins for the IDE as well.</p>
 <p>Install the required dependencies using pip:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">pip3.9 install opencv-python pyrealsense2 numpy</code></pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">pip install opencv-python pyrealsense2 numpy</code></pre>
 </div>
 </div>
 </li>
@@ -76,17 +61,11 @@ Later you might want to install python specific plugins for the IDE as well.</p>
 </li>
 <li>
 <p>Compile the segmentation library as by the instructions.
-Remember that you need python dev tools to compile code (python3.9-dev and build-essential).</p>
+Remember that you need python dev tools to compile code (python3-dev and build-essential).</p>
 </li>
 <li>
 <p>Connect a camera and try running the <code>config_colors.py</code> and <code>main.py</code> files.
-Both programs can be quit out of by pressing <code>q</code> when a camera window is active.
-If you are missing the <code>tkinter</code> module, you can install it with the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">sudo apt-get install python3.9-tk</code></pre>
-</div>
-</div>
+Both programs can be quit out of by pressing <code>q</code> when a camera window is active.</p>
 </li>
 <li>
 <p>If they work, you can continue to the next step.
