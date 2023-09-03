@@ -541,7 +541,7 @@ on how to use the board.
 
 ==== Delta X
 
-* New robot or test qualifies according to basketball rules.
+* New robot or test robot qualifies according to basketball rules.
 
 ===== Delta X with new mechanics
 
