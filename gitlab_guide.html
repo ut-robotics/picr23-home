@@ -5,12 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.20">
-<title>GitHub guide</title>
+<title>GitLab guide</title>
 <link rel="stylesheet" href="./asciidoctor.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>GitHub guide</h1>
+<h1>GitLab guide</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
@@ -74,7 +74,7 @@ Do not merge between branches listed below.</p>
 <li>
 <p><code>main</code> (protected) - default branch.
 Direct pushing not allowed.
-Pull requests should be created against this branch.</p>
+Merge requests should be created against this branch.</p>
 </li>
 <li>
 <p><code>documentation</code> - for editing main README.asciidoc and any other general documentation in root directory.</p>
@@ -105,9 +105,9 @@ Pull requests should be created against this branch.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git clone --single-branch --branch documentation git@github.com:ut-robotics/picr22-team-&lt;team-name&gt;.git picr22-team-&lt;team-name&gt;-documentation
+<pre class="highlight"><code class="language-bash" data-lang="bash">git clone --single-branch --branch documentation git@gitlab.ut.ee:loti.05.023/picr2023/picr23-team-&lt;team-name&gt;.git picr23-team-&lt;team-name&gt;-documentation
 
-git clone --single-branch --branch software https://github.com/ut-robotics/picr22-team-&lt;team-name&gt; picr22-team-&lt;team-name&gt;-software</code></pre>
+git clone --single-branch --branch software git@gitlab.ut.ee:loti.05.023/picr2023/picr23-team-&lt;team-name&gt;.git picr23-team-&lt;team-name&gt;-software</code></pre>
 </div>
 </div>
 <div class="sect3">
@@ -121,7 +121,7 @@ git clone --single-branch --branch software https://github.com/ut-robotics/picr2
 <p>Daily blogs should be written into README.asciidoc in root directory.</p>
 </li>
 <li>
-<p>Pull request should be created when general documentation is ready for review.</p>
+<p>Merge request should be created when general documentation is ready for review.</p>
 </li>
 </ul>
 </div>
@@ -135,19 +135,19 @@ git clone --single-branch --branch software https://github.com/ut-robotics/picr2
 </li>
 <li>
 <p>When the functionality for a programming task has been implemented and thoroughly tested on the court,
-a pull request should be created.</p>
+a merge request should be created.</p>
 </li>
 <li>
-<p>Instructors will review the pull request and either give feedback that needs to be resolved or merge the pull request.</p>
+<p>Instructors will review the merge request and either give feedback that needs to be resolved or merge the merge request.</p>
 </li>
 <li>
-<p>After the pull request has been merged, the relevant task can be presented during practical.</p>
+<p>After the merge request has been merged, the relevant task can be presented during practical.</p>
 </li>
 <li>
 <p>If the robot is able to complete the task, then the team gets the task approved.</p>
 </li>
 <li>
-<p>If code changes are needed for completing the task, new pull request needs to be created.</p>
+<p>If code changes are needed for completing the task, new merge request needs to be created.</p>
 </li>
 </ul>
 </div>
@@ -160,20 +160,20 @@ a pull request should be created.</p>
 <p><code>firmware</code> branch should be used.</p>
 </li>
 <li>
-<p>When the functionality has been implemented and thoroughly tested, a pull request should be created.</p>
+<p>When the functionality has been implemented and thoroughly tested, a merge request should be created.</p>
 </li>
 <li>
-<p>Instructors will review the pull request and either give feedback that needs to be resolved or merge the pull request.</p>
+<p>Instructors will review the merge request and either give feedback that needs to be resolved or merge the merge request.</p>
 </li>
 <li>
-<p>After the pull request has been merged, the relevant task can be presented during practical.</p>
+<p>After the merge request has been merged, the relevant task can be presented during practical.</p>
 </li>
 <li>
 <p>If the mainboard functionality is demonstrated and meets the firmware task requirements,
 then the team gets the task approved.</p>
 </li>
 <li>
-<p>If code changes are needed for completing the task, new pull request needs to be created.</p>
+<p>If code changes are needed for completing the task, new merge request needs to be created.</p>
 </li>
 </ul>
 </div>
@@ -190,7 +190,7 @@ then the team gets the task approved.</p>
 when the team would like feedback on preliminary design or review of completed design.</p>
 </li>
 <li>
-<p>Design will be reviewed by instructors and feedback will be given as GitHub issues.</p>
+<p>Design will be reviewed by instructors and feedback will be given as GitLab issues.</p>
 </li>
 <li>
 <p>All issues need to be resolved.
@@ -220,7 +220,7 @@ then the design tasks are completed and the PCBs will be ordered by instructors.
 when the team would like feedback on preliminary design or review of completed design.</p>
 </li>
 <li>
-<p>Design will be reviewed by instructors and feedback will be given as GitHub issues.</p>
+<p>Design will be reviewed by instructors and feedback will be given as GitLab issues.</p>
 </li>
 <li>
 <p>All issues need to be resolved.
