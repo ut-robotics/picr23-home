@@ -5,7 +5,7 @@
 * xref:grading_and_tasks.asciidoc[Grading and tasks]
 * xref:team_documentation_requirements.asciidoc[Team documentation requirements]
 * xref:basketball_robot_guide/index.asciidoc[Basketball robot guide]
-* xref:github_guide.asciidoc[GitHub (team repository) guide]
+* xref:gitlab_guide.asciidoc[GitLab (team repository) guide]
 * https://ut-robotics.github.io/robot-basketball-rules/[Basketball rules]
 
 == Previous years
