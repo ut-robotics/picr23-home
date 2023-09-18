@@ -99,11 +99,10 @@ Driving the motor at stall current for longer period will overheat the motor.
 
 ==== DRV8243
 
-* Product code: PDRV8243HRXYQ1 (HW variant, pre-production)
-* Package: VQFN-HR (14)
+* Product code: DRV8243HQDGQRQ1 (HW variant)
+* Package: HVSSOP (28)
 * link:https://www.ti.com/product/DRV8243-Q1[Product page]
-* link:https://www.ti.com/lit/ds/symlink/drv8243-q1.pdf[Datasheet latest]
-* link:drv8243-q1_datasheet_2021-08.pdf[Datasheet 2021-08] (contains pre-production version information)
+* link:https://www.ti.com/lit/ds/symlink/drv8243-q1.pdf[Datasheet]
 
 == Microcontroller
 
