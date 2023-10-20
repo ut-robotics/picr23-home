@@ -13,7 +13,7 @@ link:https://www.altium.com/solutions/academic-programs/student-licenses[]
 === Creating a project
 
 * File -> New -> Project...
-* In *Create Project* window set project name (for example picr21-team-<your team name>-mainboard) and select project folder.
+* In *Create Project* window set project name (for example picr23-team-<your team name>-mainboard) and select project folder.
 
 === Adding schematic file
 
@@ -35,7 +35,7 @@ link:https://www.altium.com/solutions/academic-programs/student-licenses[]
 
 * Right click on *.PrjPcb -> Save
 * One option to name the files in the project is to use the projects name.
-For example if project is named picr21-team-one-mainboard.PrjPcb, then schematic would be named picr21-team-mainboard.SchDoc.
+For example if project is named picr23-team-one-mainboard.PrjPcb, then schematic would be named picr23-team-one-mainboard.SchDoc.
 
 == General
 
@@ -75,9 +75,9 @@ Press *Finish*.
 
 . Open *.SchLib file.
 . In *Properties panel* set
-.. *Design Item ID* (for example STM32G441KxT)
+.. *Design Item ID* (for example STM32G431KBT6)
 .. *Designator* (for example U?)
-.. *Comment* (for example STM32G441KxT)
+.. *Comment* (for example STM32G431KBT6)
 . Pins of the symbol can be placed individually with Place -> Pin
 or in a bigger batch with Tools -> Symbol Wizard...
 . Pin names can be found in the datasheet.
