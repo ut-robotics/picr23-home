@@ -48,9 +48,11 @@
 <li><a href="#_changing_board_size">Changing board size</a></li>
 <li><a href="#_opening_3d_pcb_view">Opening 3D PCB view</a></li>
 <li><a href="#_hiding_rooms">Hiding rooms</a></li>
-<li><a href="#_changing_layer_stackup">Changing layer stackup</a></li>
-<li><a href="#_routing_traces">Routing traces</a></li>
 <li><a href="#_repouring_polygons">Repouring polygons</a></li>
+<li><a href="#_routing_traces">Routing traces</a></li>
+<li><a href="#_changing_layer_stackup">Changing layer stackup</a></li>
+<li><a href="#_controlled_impedance">Controlled impedance</a></li>
+<li><a href="#_routing_differential_pairs">Routing differential pairs</a></li>
 </ul>
 </li>
 </ul>
@@ -76,7 +78,7 @@
 <p>File &#8594; New &#8594; Project&#8230;&#8203;</p>
 </li>
 <li>
-<p>In <strong>Create Project</strong> window set project name (for example picr21-team-&lt;your team name&gt;-mainboard) and select project folder.</p>
+<p>In <strong>Create Project</strong> window set project name (for example picr23-team-&lt;your team name&gt;-mainboard) and select project folder.</p>
 </li>
 </ul>
 </div>
@@ -130,7 +132,7 @@
 </li>
 <li>
 <p>One option to name the files in the project is to use the projects name.
-For example if project is named picr21-team-one-mainboard.PrjPcb, then schematic would be named picr21-team-mainboard.SchDoc.</p>
+For example if project is named picr23-team-one-mainboard.PrjPcb, then schematic would be named picr23-team-one-mainboard.SchDoc.</p>
 </li>
 </ul>
 </div>
@@ -238,13 +240,13 @@ Press <strong>Finish</strong>.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p><strong>Design Item ID</strong> (for example STM32G441KxT)</p>
+<p><strong>Design Item ID</strong> (for example STM32G431KBT6)</p>
 </li>
 <li>
 <p><strong>Designator</strong> (for example U?)</p>
 </li>
 <li>
-<p><strong>Comment</strong> (for example STM32G441KxT)</p>
+<p><strong>Comment</strong> (for example STM32G431KBT6)</p>
 </li>
 </ol>
 </div>
@@ -364,7 +366,7 @@ and clicking on the rectangle.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Use Design &#8594; Import Changes From &lt;your project name&gt;.PrjPcb</p>
+<p>Use <strong>D</strong>esign &#8594; <strong>I</strong>mport Changes From &lt;your project name&gt;.PrjPcb</p>
 </li>
 </ul>
 </div>
@@ -377,7 +379,7 @@ and clicking on the rectangle.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Open Rules with Design &#8594; Rules&#8230;&#8203;</p>
+<p>Open Rules with <strong>D</strong>esign &#8594; <strong>R</strong>ules&#8230;&#8203;</p>
 </li>
 </ul>
 </div>
@@ -485,11 +487,18 @@ or moving reference designators and component values.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_changing_layer_stackup">Changing layer stackup</h3>
+<h3 id="_repouring_polygons">Repouring polygons</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Open stackup editor with Design &#8594; Layer Stack Manager&#8230;&#8203;</p>
+<p>Select <strong>T</strong>ools &#8594; Poly<strong>g</strong>on Pours &#8594; Repour <strong>A</strong>ll</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Shortcut: T &#8594; G &#8594; A</p>
+</li>
+</ul>
+</div>
 </li>
 </ol>
 </div>
@@ -505,17 +514,246 @@ or moving reference designators and component values.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_repouring_polygons">Repouring polygons</h3>
+<h3 id="_changing_layer_stackup">Changing layer stackup</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Select <strong>T</strong>ools &#8594; Poly<strong>g</strong>on Pours &#8594; Repour <strong>A</strong>ll</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Shortcut: T &#8594; G &#8594; A</p>
+<p>Go to <a href="https://jlcpcb.com/impedance" class="bare">https://jlcpcb.com/impedance</a> for stackup descriptions.</p>
+<div class="paragraph">
+<p>Recommended 4-layer stackup from JLCPCB is <strong>JLC04161H-3313</strong>.
+It costs the same as the default one (JLC04161H-7628), but has smaller distance between adjacent layers,
+which is helpful for reducing crosstalk.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/electronics_jlcpcb_JLC04161H-3313_1p6mm_stackup.png" alt="electronics jlcpcb JLC04161H 3313 1p6mm stackup">
+</div>
+<div class="title">Figure 1. JLC04161H-3313 stackup with 1.6mm thickness, 1oz outer copper and 0.5oz inner copper weight</div>
+</div>
+<div class="paragraph">
+<p>Dielectric constants for materials used by JLCPCB can be found here:
+<a href="https://jlcpcb.com/help/article/263-User-Guide-to-the-JLCPCB-Impedance-Calculator" class="bare">https://jlcpcb.com/help/article/263-User-Guide-to-the-JLCPCB-Impedance-Calculator</a></p>
+</div>
 </li>
-</ul>
+<li>
+<p>Open stackup editor with <strong>D</strong>esign &#8594; Layer Stack Manager&#8230;&#8203;</p>
+</li>
+<li>
+<p>Select <strong>Top Layer</strong> and press <strong>Add</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_stackup_step_1_top_layer_press_add.png" alt="altium stackup step 1 top layer press add">
+</div>
+</div>
+</li>
+<li>
+<p>Select <strong>Below</strong>, <strong>Signal</strong> and make sure that <strong>Include Dielectrics</strong> is selected.
+Press <strong>Ok</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_stackup_step_2_add_inner_layers.png" alt="altium stackup step 2 add inner layers">
+</div>
+</div>
+</li>
+<li>
+<p>Change <strong>Thickness</strong> and dielectric constant (<strong>Dk</strong>) values based on JLCPCB specifications.
+Rename Layer 1 and Layer 2 as Layer 2 and Layer 3.
+Change copper weight of <strong>inner layers</strong> to <strong>1/2oz</strong>.
+Change <strong>Dielectric 1</strong> type to <strong>Core</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_stackup_step_3_change_parameters.png" alt="altium stackup step 3 change parameters">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_controlled_impedance">Controlled impedance</h3>
+<div class="sect3">
+<h4 id="_using_altium_designers_impedance_calculator">Using Altium Designer&#8217;s impedance calculator</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open stackup editor with <strong>D</strong>esign &#8594; Layer Stac<strong>k</strong> Manager&#8230;&#8203;</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_impedance_profile_step_1_open_impedance_tab.png" alt="altium impedance profile step 1 open impedance tab">
+</div>
+</div>
+</li>
+<li>
+<p>Press <strong>Add</strong> to create new impedance profile.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_impedance_profile_step_2_press_add.png" alt="altium impedance profile step 2 press add">
+</div>
+</div>
+</li>
+<li>
+<p>On <strong>Properties</strong> panel change <strong>Type</strong> to <strong>Differential</strong> and <strong>Target Impedance</strong> to <strong>90</strong>.
+90 Ohms is the differential impedance of USB differential pairs.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_impedance_profile_step_3_properties_differential_90.png" alt="altium impedance profile step 3 properties differential 90">
+</div>
+</div>
+</li>
+<li>
+<p>Change <strong>Trace Gap</strong> for each layer to 0.2mm.
+Can be narrower or wider if needed.
+Same differential impedance can be achieved with different trace widths and gaps.
+Also on <strong>Properties</strong> panel change <strong>Covering (C2)</strong> (Soldermask thickness above traces) to <strong>0.6mil (0.01524mm)</strong>.
+JLCPCB has specified soldermask thickness values on this page: <a href="https://jlcpcb.com/impedance" class="bare">https://jlcpcb.com/impedance</a>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_impedance_profile_step_4_trace_gap_and_soldermask_thickness.png" alt="altium impedance profile step 4 trace gap and soldermask thickness">
+</div>
+</div>
+</li>
+<li>
+<p>Manually round trace widths.
+This is not required, but sometimes useful on a dense board or if you like rounder numbers.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_impedance_profile_step_5_trace_width_rounding.png" alt="altium impedance profile step 5 trace width rounding">
+</div>
+</div>
+</li>
+<li>
+<p>Save changes.</p>
+</li>
+<li>
+<p>Open schematic (*.SchDoc).</p>
+</li>
+<li>
+<p>Add net labels to differential pair signals with <strong>_P</strong> suffix for positive signal and <strong>_N</strong> suffix for negative signal.
+It&#8217;s possible to specify different suffixes in Project Options, but there is probably no real need for that.
+Enclose net labels in a <strong>Blanket</strong> and add a <strong>Differential Pair</strong> directive so that it touches the blanket.
+It&#8217;s possible to add separate Differential Pair directive to both nets,
+but it&#8217;s easier to specify common parameters with a blanket.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_differential_pair_schematic.png" alt="altium differential pair schematic">
+</div>
+</div>
+</li>
+<li>
+<p>Select the Differential Pair directive
+and on the <strong>Properties</strong> panel add <strong>Diff. Pair Net Class</strong> named DIFF_90 for example.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_differential_pair_add_class.png" alt="altium differential pair add class">
+</div>
+</div>
+</li>
+<li>
+<p>Save changes.</p>
+</li>
+<li>
+<p>Open *.PcbDoc.</p>
+</li>
+<li>
+<p>Import schematic changes with <strong>D</strong>esign &#8594; <strong>I</strong>mport Changes From &lt;your project name&gt;.PrjPcb</p>
+</li>
+<li>
+<p>Open Rules with <strong>D</strong>esign &#8594; <strong>R</strong>ules&#8230;&#8203;</p>
+</li>
+<li>
+<p>Right click on <strong>Differential Pairs Routing</strong> and select <strong>New Rule&#8230;&#8203;</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_differential_pair_add_routing_rule.png" alt="altium differential pair add routing rule">
+</div>
+</div>
+</li>
+<li>
+<p><strong>Name</strong> the rule as <strong>DiffPairsRoutingDIFF_90</strong>.
+Under <strong>Where The Object Matches</strong> select <strong>Diff Pair Class</strong> and <strong>DIFF_90</strong>.
+Activate <strong>Use Impedance Profile</strong> and select <strong>D90</strong>.
+Press <strong>OK</strong> to apply changes and close the rules.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_differential_pair_routing_rule_parameters.png" alt="altium differential pair routing rule parameters">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_using_manufacturers_impedance_calculator">Using manufacturer&#8217;s impedance calculator</h4>
+<div class="paragraph">
+<p>Another option, if a PCB manufacturer has an impedance calculation tool available,
+is to enter the calculated values manually to the rule.
+JLCPCB has an impedance calculator available here:
+<a href="https://jlcpcb.com/pcb-impedance-calculator/" class="bare">https://jlcpcb.com/pcb-impedance-calculator/</a></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the <a href="https://jlcpcb.com/pcb-impedance-calculator/">impedance calculator</a>.</p>
+</li>
+<li>
+<p>Change the input parameters and press Calculate.
+Calculated trace width on the outer layers for a 90-Ohm differential impedance
+with a 0.2mm gap and JLC04161H-3313 stackup is 0.1575mm:</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/jlcpcb_impedance_calculator_90_ohm_differential.png" alt="jlcpcb impedance calculator 90 ohm differential">
+</div>
+</div>
+</li>
+<li>
+<p>Trace width and gap values can be used to define a differential pair routing rule.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_differential_pair_routing_rule_parameters_manual.png" alt="altium differential pair routing rule parameters manual">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_routing_differential_pairs">Routing differential pairs</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open *.PcbDoc</p>
+</li>
+<li>
+<p>Position components so that the differential pair traces can be as straight as possible.
+If there are other components or traces close to the differential pair traces,
+try to move them further away.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_differential_pair_routing_component_positioning.png" alt="altium differential pair routing component positioning">
+</div>
+</div>
+</li>
+<li>
+<p>Start routing with Ro<strong>u</strong>te &#8594; Interactive D<strong>i</strong>fferential Pair Routing (Shift+Ctrl+W or U &#8594; I).
+To reduce impedance discontinuities and intra-pair skew:
+try to avoid bends,
+avoid using vias if possible or reduce the amount of vias
+and Keep traces as symmetrical as possible.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_differential_pair_routing_inital_traces.png" alt="altium differential pair routing inital traces">
+</div>
+</div>
+</li>
+<li>
+<p>If needed, adjust traces manually to reduce stub lengths.
+This can be done with regular routing (Ro<strong>u</strong>te &#8594; Interactive Rou<strong>t</strong>ing [Ctrl+W or U &#8594; T])
+and some manual deleting and moving of the traces.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/altium_differential_pair_routing_adjusted_traces.png" alt="altium differential pair routing adjusted traces">
+</div>
 </div>
 </li>
 </ol>
